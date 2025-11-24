@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Wind, MessageSquare, Users, HeartHandshake, ArrowRight } from "lucide-react";
+import logo from "../assets/off_s.png";
 
 export default function Home() {
     const features = [
         {
             to: "/scent",
             icon: Wind,
-            title: "Melhora de Cheiro",
+            title: "Recomendacão Anônima",
             desc: "Notifique alguém anonimamente sobre odores de forma gentil.",
             color: "text-blue-400",
             gradient: "from-blue-500/20 to-purple-500/20"
@@ -41,19 +42,18 @@ export default function Home() {
     return (
         <div className="flex flex-col items-center justify-center w-full space-y-12 py-12">
             {/* Hero Section */}
-            <div className="text-center space-y-6 max-w-3xl animate-slide-up">
-                <h1 className="text-7xl md:text-9xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-200 to-white/50 drop-shadow-lg">
-                    OFF
-                </h1>
+            <div className="text-center  space-y-6 max-w-3xl animate-slide-up">
+                <img src={logo} alt="OFF Logo" className="mx-auto w-48 md:w-64" />
+
                 <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed">
-                    Sua plataforma de interações <span className="text-primary font-medium">anônimas</span> e <span className="text-primary font-medium">seguras</span>.
+                    Sua plataforma de interações <span className="text-[#1ffff0] font-medium">anônimas</span> e <span className="text-[#1ffff0] font-medium">seguras</span>.
                     <br />
                     Liberdade para melhorar, debater e apoiar.
                 </p>
             </div>
 
-            {/* Grid de Funcionalidades */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl px-4">
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 gap-y-12 w-full max-w-5xl px-4">
                 {features.map((feature, index) => (
                     <Link key={index} to={feature.to} className="group">
                         <Card className={`h-full bg-white/5 backdrop-blur-lg border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl overflow-hidden relative`}>

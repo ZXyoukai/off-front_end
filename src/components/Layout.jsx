@@ -32,7 +32,7 @@ export default function Layout({ children }) {
                             size="icon"
                             className={cn(
                                 "rounded-full transition-all duration-300 hover:bg-white/10 hover:scale-110",
-                                location.pathname === item.path && "bg-primary/20 text-primary shadow-[0_0_10px_rgba(124,58,237,0.5)]"
+                                location.pathname === item.path && "bg-[#1ffff0]/20 text-[#1ffff0] shadow-[0_0_10px_rgba(31,255,240,0.5)]"
                             )}
                             title={item.label}
                         >
